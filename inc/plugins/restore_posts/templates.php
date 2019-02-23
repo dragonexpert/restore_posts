@@ -190,7 +190,7 @@ function restore_posts_templates_install()
     }
 
     require_once MYBB_ROOT . "inc/adminfunctions_templates.php";
-    find_replace_templatesets('modcp_nav_forums_posts', "#", preg_quote('{$nav_modqueue}') . "#i", "{\$nav_modqueue}\n{\$modcp_nav_restore_posts}");
+    find_replace_templatesets('modcp_nav_forums_posts', "#" . preg_quote('{$nav_modqueue}') . "#i", "{\$nav_modqueue}\n{\$modcp_nav_restore_posts}");
 }
 
 function restore_posts_templates_uninstall()
@@ -209,5 +209,5 @@ function restore_posts_templates_uninstall()
     $db->delete_query("templates", "title IN(" . $string . ")");
 
     require_once MYBB_ROOT . "inc/adminfunctions_templates.php";
-    find_replace_templatesets('modcp_nav_forums_posts', "#", preg_quote('\n{$modcp_nav_restore_posts}') . "#i", "");
+    find_replace_templatesets('modcp_nav_forums_posts', "#" . preg_quote('{$modcp_nav_restore_posts}') . "#i", "");
 }
