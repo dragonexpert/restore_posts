@@ -258,7 +258,7 @@ function restore_posts_modcp()
             }
             if($threads)
             {
-                add_breadcrumb($lang->modcp_nav_restore_posts, "modcp.php?action=restore_threads&amp;type=threads");
+                add_breadcrumb($lang->restore_posts_restore_threads, "modcp.php?action=restore_threads&amp;type=threads");
                 $plugins->run_hooks("modcp_restore_threads_end");
                 $navsep = " | ";
                 eval("\$threadqueue = \"".$templates->get("modcp_restore_posts_threads")."\";");
@@ -386,7 +386,7 @@ function restore_posts_modcp()
             }
             if($posts)
             {
-                add_breadcrumb($lang->mcp_nav_modqueue_posts, "modcp.php?action=restore_posts&amp;type=posts");
+                add_breadcrumb($lang->restore_posts_posts, "modcp.php?action=restore_posts&amp;type=posts");
                 $navsep = " | ";
                 $plugins->run_hooks("modcp_restore_posts_end");
                 eval("\$postqueue = \"".$templates->get("modcp_restore_posts_posts")."\";");
