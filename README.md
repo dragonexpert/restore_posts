@@ -5,7 +5,7 @@ Adds the ability to restore posts and threads to the Mod CP of your MyBB Forum. 
 None
 
 ## Template Changes
--8 New templates
+- 8 New templates
 - Modifies modcp_nav_forums_posts
 
 ## Template Descriptions
